@@ -1,0 +1,25 @@
+<div class="container">
+<br>
+<h3 class="display-4"> Login form </h3>
+<br>
+<br>
+
+<%= form_with model: @user, local: true do |form| %>
+   
+   
+   
+  <p>
+      <%= form.label "Email" %><br>
+      <%= form.text_field :email, :class => "form-fields" %>
+  </p>
+  <p>
+      <%= form.label "Password" %><br>
+      <%= form.text_field :password, :class => "form-fields" %>
+  </p>
+   
+  <%= form.submit "SignIn", :id => "form-btn" %>  
+  <br>
+  <br>
+  <p> Dont's have an Account? <a href="#"> SignUp </a> </p>
+<% end %>
+ </div>

@@ -1,0 +1,42 @@
+<div class="container">
+<br>
+<h3 class="display-4"> Edit Profile </h3>
+<br>
+<br>
+ 
+
+
+<%= form_with url:"/profile/edit_profile",   local: true , method: :post do |form| %>
+  <p>
+      <%= form.label "Change your Profile Image" %><br>
+      <%= form.file_field :profile_image, :class => "form-fields" %>
+</p>
+  <p>
+      <%= form.label "First Name" %><br>
+      <%= form.text_field :first_name, :class => "form-fields"%>
+  </p>
+  <p>
+      <%= form.label "Last Name" %><br>
+      <%= form.text_field :last_name, :class => "form-fields" %>
+  </p>
+  <p>
+      <%= form.label "Date of Birth" %><br>
+      <%= form.date_field :date_of_birth, :class => "form-fields" %>
+  </p>
+  <p>
+      <%= form.label "Mobile" %><br>
+      <%= form.text_field :mobile, :class => "form-fields" %>
+  </p>
+  <p>
+      <%= form.label "Email" %><br>
+      <%= form.text_field :email, :class => "form-fields" %>
+  </p>
+   
+  <%= form.submit "Update", :id => "form-btn" %>  
+  <br>
+  <br>
+   
+<% end %>
+ 
+
+</div>

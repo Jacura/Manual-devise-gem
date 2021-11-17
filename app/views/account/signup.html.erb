@@ -1,0 +1,44 @@
+
+<div class="container">
+<br>
+<h3 class="display-4"> SignUp form </h3>
+<br>
+<br>
+
+
+<%= form_with model: @user, local: true do |form| %>
+   
+  <p>
+      <%= form.label "First Name" %><br>
+      <%= form.text_field :first_name, :class => "form-fields"%>
+  </p>
+  <p>
+      <%= form.label "Last Name" %><br>
+      <%= form.text_field :last_name, :class => "form-fields" %>
+  </p>
+  <p>
+      <%= form.label "Date of Birth" %><br>
+      <%= form.date_field :date_of_birth, :class => "form-fields" %>
+  </p>
+  <p>
+      <%= form.label "Mobile" %><br>
+      <%= form.text_field :mobile, :class => "form-fields" %>
+  </p>
+  <p>
+      <%= form.label "Email" %><br>
+      <%= form.text_field :email, :class => "form-fields" %>
+  </p>
+  <p>
+      <%= form.label "Password" %><br>
+      <%= form.text_field :password, :class => "form-fields" %>
+  </p>
+  <p>
+      <%= form.label "Confirm Password" %><br>
+      <%= form.text_field :confirm_password, :class => "form-fields" %>
+  </p>
+  <%= form.submit "SignUp", :id => "form-btn" %>  
+  <br>
+  <br>
+  <p> Already have an Account? <a href="#"> SignIn </a> </p>
+<% end %>
+ 
