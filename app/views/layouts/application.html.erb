@@ -12,7 +12,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="background-image:url(https://image.shutterstock.com/image-vector/vector-white-ball-abstract-background-260nw-1728421882.jpg);background-repeat: no-repeat, repeat;background-size: cover;">
+ 
+
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">New App</a>
@@ -23,14 +25,18 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="home/dashboard">Home <span class="sr-only">(current)</span></a>
+      <%= link_to('Home', { action: 'dashboard', controller: 'home'},    class: 'nav-link') %> 
+
       </li>
       
       <li class="nav-item">
       <% if session[:user] %>
-      <a class="nav-link" href="password/reset_password">Reset Password</a>
+      <%= link_to('Reset Password', { action: 'reset_password', controller: 'password'},    class: 'nav-link') %> 
+
+      
       <% else %>
-      <a class="nav-link" href="password/forget_password">Forget Password</a>
+      <%= link_to('Forget Password', { action: 'forget_password', controller: 'password'},    class: 'nav-link') %> 
+
       <% end %>
       
 
@@ -39,7 +45,8 @@
 
     <li class="nav-item">
     <% if session[:user] %>
-    <a class="nav-link" href="profile/edit_profile">Edit Profile</a>
+    <%= link_to('Edit Profile', { action: 'edit_profile', controller: 'profile'},    class: 'nav-link') %> 
+
      
     <% end %>
   </li>
@@ -47,9 +54,9 @@
 
       <li class="nav-item">
         <% if session[:user] %>
-        <a class="nav-link" href="account/logout">Logout</a>
+         <%= link_to('Logout', { action: 'logout', controller: 'account'},    class: 'nav-link') %> 
         <% else %>
-        <a class="nav-link" href="account/login">Login</a>
+         <%= link_to('Login', { action: 'login', controller: 'account'},    class: 'nav-link') %> 
         <% end %>
       </li>
 
@@ -68,3 +75,5 @@
 
 
 
+
+ 

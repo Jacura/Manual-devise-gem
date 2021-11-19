@@ -24,6 +24,7 @@ class PasswordController < ApplicationController
 		
 		if request.post?			
 			if @user
+                puts "====================================================== #{params[:password]} #{@user.inspect}"	
 			@user.update(:password=>params[:password])
 			# UserNotifier.reset_password_confirmation(@user).deliver
 			flash[:notice] = "Your password has been reset"

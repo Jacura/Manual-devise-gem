@@ -20,6 +20,6 @@
   <%= form.submit "SignIn", :id => "form-btn" %>  
   <br>
   <br>
-  <p> Dont's have an Account? <a href="#"> SignUp </a> </p>
+  <p> Dont's have an Account? <%= link_to('SignUp', { action: 'signup', controller: 'account'},    class: 'nav-link') %>     </p>
 <% end %>
  </div>

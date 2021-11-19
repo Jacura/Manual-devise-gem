@@ -39,6 +39,6 @@
   <%= form.submit "SignUp", :id => "form-btn" %>  
   <br>
   <br>
-  <p> Already have an Account? <a href="#"> SignIn </a> </p>
+  <p> Already have an Account?<%= link_to('SignIn', { action: 'login', controller: 'account'},    class: 'nav-link') %> </p>
 <% end %>
  

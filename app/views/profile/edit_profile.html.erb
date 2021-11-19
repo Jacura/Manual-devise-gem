@@ -7,7 +7,15 @@
 
 
 <%= form_with url:"/profile/edit_profile",   local: true , method: :post do |form| %>
-  <p>
+     <div style="border-radius:30px">
+    <div class="card" style="width: 13rem;border:none;margin-left:300px;">
+     <%= image_tag(@user.profile_image) if @user.profile_image.attached? %>
+    </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+    <p>
       <%= form.label "Change your Profile Image" %><br>
       <%= form.file_field :profile_image, :class => "form-fields" %>
 </p>
@@ -35,6 +43,7 @@
   <%= form.submit "Update", :id => "form-btn" %>  
   <br>
   <br>
+  </div>
    
 <% end %>
  
